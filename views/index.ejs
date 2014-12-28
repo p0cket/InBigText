@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+		<link rel="stylesheet" type="text/css" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  	<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  	<!-- and our js too below -->
+  	<script type="text/javascript" src="first.js"></script>
+</head>
+
+<body>
+	<div class="navbar navbar-default">
+		<div class="pull-left" id="navStuff">
+			<p class="navbar-brand">In Big Text</p>
+		</div>
+	</div>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="col-centered" id="text-spot">Make this big text</h1>
+		</div>
+	</div>
+	<div class="image">
+		<img src="" id="img-spot">
+	</div>
+
+	<div class="container"
+	<p id="newLink"></p>
+	<form action="/posting" method="POST" >
+			<div class="form-group">
+				<label>Text to display</label>
+				<input name="displayText" class="form-control" placeholder="Enter text">
+			</div>
+			<div class="form-group">
+				<label>url image (Optional)</label>
+				<input name="displayImage" class="form-control" placeholder="Paste URL of image here">
+			</div>
+			<div class="form-group">
+				<label>Upload your own file</label>
+				<input type="file" class="imput-file">
+				<p class="help-block">Example block-level help text here.</p>
+				</label>
+			</div>
+
+			<button type="submit" class="btn btn-default">Submit</button>
+	</form>
+	</div>
+
+
+</body>
+
+</html>
