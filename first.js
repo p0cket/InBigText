@@ -12,6 +12,28 @@ function getPost(i) {
   document.getElementById("img-spot").src = pageContent[i].thisImage;
 }
 
+function sendNewPostToServer(textSpot, imgSpot) {
+  // next line encodes images so that theres no issues
+  var imgSpot = encodeURIComponent(imgSpot);
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", '/posting/' + textSpot + "/" + imgSpot, true);
+  xhr.onreadystatechange = function() {
+    if(xhr.readyState === 4) {
+      // RESPONSE
+      var resp = xhr.responseText;
+      alert(resp);
+      // manipulation of response
+      var results = resp.split(":");
+      var text = results[0];
+      var image = results[1];
+      console.log(text);
+      console.log(image);
+      makeNewLink(text, image);
+    }
+  }
+  xhr.send();
+}
+
 window.onload = function() {
   getPost(pageID);
 }
