@@ -36,16 +36,14 @@ var id = 0;
 
 app.post('/posting', function(req, res) {
   console.log(req.body);
+  var pageName = req.body.pageName;
   var displayText = req.body.displayText;
   var displayImage = req.body.displayImage;
-  pages[id++] = {
+  pages[pageName] = {
     text : displayText,
     image : displayImage
   }
-  res.render('page', {
-      displayText : displayText,
-      image : displayImage
-  });
+  res.redirect('/page/' + pageName)
 });
 
 app.get("/page/:makeNewPage", function(req, res) {
