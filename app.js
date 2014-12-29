@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.set('view options', {layout: false});
-
+// why I then do this again? We'll find out
 app.set('port', (process.env.PORT || 5000));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
