@@ -48,8 +48,8 @@ app.post('/posting', function(req, res) {
   });
 });
 
-app.get("/page/:page", function(req, res) {
-  var thisPage = pages[req.params.page];
+app.get("/page/:makeNewPage", function(req, res) {
+  var thisPage = pages[req.params.makeNewPage];
   res.render('page', {
     displayText : thisPage.text,
     image : thisPage.image
